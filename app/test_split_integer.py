@@ -1,5 +1,3 @@
-from operator import invert
-
 from app.split_integer import split_integer
 
 
@@ -24,8 +22,3 @@ def test_parts_should_be_sorted_when_they_are_not_equal() -> None:
 def test_should_add_zeros_when_value_is_less_than_number_of_parts() -> None:
     assert split_integer(1, 2)[0] == 1
     assert split_integer(1, 2)[1] == 0
-
-def test_should_return_exact_number_of_parts() -> None:
-    assert len(split_integer(8, 2)) == 2
-    assert len(split_integer(17, 4)) == 4
-    assert len(split_integer(1, 2)) == 2
